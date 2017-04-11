@@ -33,10 +33,17 @@
             android:id="@+id/editText" />
 
         <TextView
-            android:text="TextView"
+            android:text="Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView2" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:ems="10"
+            android:id="@+id/editText2" />
 
     </LinearLayout>
 </RelativeLayout>
