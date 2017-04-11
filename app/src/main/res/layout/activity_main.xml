@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="Enter Name"
             android:id="@+id/main_tv" />
 
         <EditText
@@ -37,5 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView2" />
+
     </LinearLayout>
 </RelativeLayout>
