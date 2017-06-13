@@ -1,0 +1,136 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <title>加入會員</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      function check_data()
+      {
+        if (document.myForm.account.value.length == 0)
+        {
+          alert("「使用者帳號」未填寫!");
+          return false;
+        }
+        if (document.myForm.account.value.length > 20 || document.myForm.account.value.length <= 5)
+        {
+          alert("「使用者帳號」請勿小於6或大於20個字!");
+          return false;
+        }
+        if (document.myForm.password.value.length == 0)
+        {
+          alert("「使用者密碼」未填寫!");
+          return false;
+        }
+        if (document.myForm.password.value.length > 20 || document.myForm.password.value.length <= 5)
+        {
+          alert("「使用者密碼」請勿小於6或大於20個字!");
+          return false;
+        }
+        if (document.myForm.re_password.value.length == 0)
+        {
+          alert("「密碼確認」未填寫!");
+          return false;
+        }
+        if (document.myForm.password.value != document.myForm.re_password.value)
+        {
+          alert("「密碼確認」錯誤!!! 請檢查密碼!!!");
+          return false;
+        }
+        if (document.myForm.fname.value.length == 0)
+        {
+          alert("您的姓氏未填寫！");
+          return false;
+        }
+        if (document.myForm.lname.value.length == 0)
+        {
+          alert("您的名字未填寫！");
+          return false;
+        }
+        if (document.myForm.cellphone.value.length == 0)
+        {
+          alert("您的行動電話未填寫！");
+          return false;
+        }
+        if (document.myForm.email.value.length == 0)
+        {
+          alert("您的E-mail未填寫！");
+          return false;
+        }
+        myForm.submit();
+      }
+    </script>		
+  </head>
+  <body>
+    <p align="center"><img src="join.jpg"></p>
+    <form action="addmember.php" method="post" name="myForm">
+      <table border="2" align="center" bordercolor="#6666FF">
+        <tr> 
+          <td colspan="2" bgcolor="#6666FF" align="center"> 
+            <font color="#FFFFFF">請填入下列資料 (標示「*」欄位請務必填寫)</font>
+          </td>
+        </tr>
+        <tr bgcolor="#99FF99"> 
+          <td align="right">*使用者帳號：</td>
+          <td><input name="account" type="text" size="20">
+          (請使用英文或數字鍵)</td>
+        </tr>
+        <tr bgcolor="#99FF99"> 
+          <td align="right">*使用者密碼：</td>
+          <td><input name="password" type="password" size="20">
+          (請使用英文或數字鍵)</td>
+        </tr>
+        <tr bgcolor="#99FF99"> 
+          <td align="right">*密碼確認：</td>
+          <td><input name="re_password" type="password" size="20">
+          (再輸入一次密碼)</td>
+        </tr>
+        <tr bgcolor="#99FF99">
+          <td align="right">*姓氏：</td>
+          <td><input name="fname" type="text" size="5"></td>
+        </tr>
+        <tr bgcolor="#99FF99">
+          <td align="right">*名字：</td>
+          <td><input name="lname" type="text" size="10"></td>
+        </tr>
+        <tr bgcolor="#99FF99"> 
+          <td align="right">*性別：</td>
+          <td> 
+            <input type="radio" name="sex" value="男" checked>男 
+            <input type="radio" name="sex" value="女">女
+          </td>
+        </tr>
+        <tr bgcolor="#99FF99"> 
+          <td align="right">電話：</td>
+          <td><input name="telephone" type="text" size="20">
+              (依照 (02) 2311-3836 格式 or (04) 657-4587)
+          </td>
+        </tr>
+        <tr bgcolor="#99FF99"> 
+          <td align="right">*行動電話：</td>
+          <td><input name="cellphone" type="text" size="20">
+              (依照 (0922) 302-228 格式)
+          </td>
+        </tr>
+        <tr bgcolor="#99FF99">
+          <td align="right">*E-mail 帳號：</td>
+          <td><input name="email" type="text" size="40"></td>
+        </tr>
+        <tr bgcolor="#99FF99"> 
+          <td align="right">地址：</td>
+          <td><input name="address" type="text" size="50"></td>
+        </tr>
+        <tr bgcolor="#99FF99"> 
+          <td align="right">個人網站：</td>
+          <td><input name="url" type="text" value="http://" size="50"></td>
+        </tr>
+        <tr bgcolor="#99FF99"> 
+          <td colspan="2" align="CENTER"> 
+            <input type="button" value="加入會員" onClick="check_data()">　
+            <input type="reset"  value="重新填寫">
+			<input type="button" value="取消" onclick="location.href='index.htm'">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+html{
+    min-height:100%;
+    background-color:#fffff;
+}
+
+body{
+    font-size:75%;
+	background: #797740 url(../images/bg.jpg) no-repeat fixed center top;
+    font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+    line-height:1.5;
+    margin:0;
+    padding:0;
+    background-color:#FFFFFF;
+	min-height:70%;
+}
+
+img{
+    border:none;
+}
+
+A:link {color: white;}
+A:visited {color: white;}
+A:active {color: white;}
+A:hover {color: #FF7100;}
+
+
+/*----------------------------------------
+ header
+----------------------------------------*/
+
+div#header{
+    height:80px;
+    width:100%;
+    color:#FFFFFF;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+    background-image:url(../images/header_bg.gif);
+	/*background:rgba(0,0,0,1);*/
+    background-position:50% 100%;
+    position:fixed; /*固定位置定位*/
+    top:0; /*距離上方 0 像素*/
+    z-index:1; /*重疊時會在其他元素之上*/
+}
+
+div#header-inner{
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+p#logo{
+    float:left;
+    margin:0;
+}
+
+ul#globalNavigation{
+    margin:0 ;
+    width:600px;
+    padding:50px 0 0 0;
+    float:right;
+    list-style:none;
+}
+
+ul#globalNavigation li a{
+    width:80px;
+    display:block;
+    float:left;
+    margin:0px;
+    font-size:15px;
+    text-decoration:none;
+}
+input#search{
+    width:140px;
+    height:20px;
+    border:none;
+    float:left;
+}
+
+ul#globalNavigation li img{
+    margin:-5px 0 0 15;
+    vertical-align:bottom;
+    float:left;
+}
+/*----------------------------------------
+ 導覽
+----------------------------------------*/
+div#global_navi {
+	height:50px;
+    width:100%;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+	background:#FF7100;
+    position:fixed; /*固定位置定位*/
+    top:80; /*距離上方 0 像素*/
+    z-index:1; /*重疊時會在其他元素之上*/
+	}
+
+div#global_navi-inner {
+	width:500px;
+    margin-left:auto;
+    margin-right:auto;
+	}
+/*------
+ 主導覽
+-------*/
+div#global_navi ul {
+    margin: 0 0 0 0px;
+    display: inline-block;
+    *display: inline;
+	}
+
+div#global_navi ul li {
+	width:150px;  
+	height:50px;
+	float:left;
+    list-style:none;
+	font-size:20px;
+    text-align:center;  
+    line-height:50px;
+}
+
+div#global_navi a {
+	display:block;
+	height:50px;
+  
+	text-decoration:none;
+	color:#fff;
+	}
+div#global_navi ul li ul li a {
+    background:#7F7F7F;
+}
+
+div#global_navi ul li ul li a:hover{
+    color:#FF7100;
+}
+
+div#global_navi li a:hover {
+    color:#FF7100;
+    background:#7F786B;
+	}
+/*------
+ 下拉式
+-------*/
+div#global_navi ul li ul.pd {
+	display:none;
+	font-size:100%;
+	padding:0;
+	}
+div#global_navi ul li:hover ul.pd {
+	display:block; 
+	position:absolute;
+	z-index:10;
+	}
+div#global_navi ul li ul.pd li {
+	float:none;
+	}
+/*----------------------------------------
+ contents
+----------------------------------------*/
+div#contents{
+    width:100%;
+	top:130px;
+	margin: 0px;
+	padding-bottom: 100px;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+	text-align:center;
+	font-size:16px;
+	
+}
+/*------
+ 登入
+-------*/
+div#login{
+	width:500px;
+	height:430px;
+	margin:260 auto 0;
+	border-radius:6px;
+	background:rgba(255,255,255,0.75);
+}
+
+div#login img{
+	width:150px;
+	height:150px;
+	border-radius: 50%;
+	margin:40 auto 20 auto;
+	border:5px solid #333333;
+	background:rgba(255,255,255,0.9);
+}
+/*------
+ 帳密
+-------*/
+div#person{
+	width:300px;
+	height:200px;
+	margin:0 auto;
+}
+
+div#person input{
+	width:300px;
+	height:40px;
+	font-size:18px;
+	margin:5 auto;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+}
+
+div#person input[type="button"]{
+	background-color:#4F6DCC;
+	border-radius: 6px; 
+	color:white;
+}
+
+div#person a{
+	color:blue;
+	text-decoration:none;
+	margin:0 30;
+}
+
+div#person a:hover{
+	color:blue;
+	text-decoration:underline;
+}
+
+/*----------------------------------------
+ footer
+----------------------------------------*/
+div#footer{
+    width:100%;
+	color:#bbb;
+	font-size:14px;
+    background:#333333;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+	position:fixed;	
+	bottom: 0;
+}
+
+div#footer-inner{
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+	padding-top:10px;
+    padding-bottom:20px;
+	text-align:center;
+    overflow:hidden;/* clearfix */
+    /zoom:1;/* clearfix for IE */
+
+}
+
+ul#siteinfoNavigation{
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0;
+    list-style:none;
+    float:left;
+}
+
+ul#siteinfoNavigation li{
+   
+    display:inline;
+    margin:0;
+    padding:0 0.8em;
+    border-right:1px solid #FFFFFF;
+}
+
+ul#siteinfoNavigation li a{
+    color:#FFFFFF;
+    text-decoration:none;
+    float:none;
+}
+
+
+div#footer address{
+    font-style:normal;
+    float:none;
+
+}

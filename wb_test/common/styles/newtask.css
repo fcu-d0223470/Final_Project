@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+html{
+    min-height:100%;
+    background-color:#fffff;
+}
+
+body{
+    font-size:75%;
+	background: #797740 url(../images/bg.jpg) no-repeat fixed center top;
+    font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+    line-height:1.5;
+    margin:0;
+    padding:0;
+    background-color:#FFFFFF;
+	min-height:70%;
+}
+
+img{
+    border:none;
+}
+
+A:link {color: white;}
+A:visited {color: white;}
+A:active {color: white;}
+A:hover {color: #FF7100;}
+
+
+/*----------------------------------------
+ header
+----------------------------------------*/
+
+div#header{
+    height:80px;
+    width:100%;
+    color:#FFFFFF;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+    background-image:url(../images/header_bg.gif);
+	/*background:rgba(0,0,0,1);*/
+    background-position:50% 100%;
+    position:fixed; /*固定位置定位*/
+    top:0; /*距離上方 0 像素*/
+    z-index:1; /*重疊時會在其他元素之上*/
+}
+
+div#header-inner{
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+p#logo{
+    float:left;
+    margin:0;
+}
+
+ul#globalNavigation{
+    margin:0 ;
+    width:600px;
+    padding:50px 0 0 0;
+    float:right;
+    list-style:none;
+}
+
+ul#globalNavigation li a{
+    width:80px;
+    display:block;
+    float:left;
+    margin:0px;
+    font-size:15px;
+    text-decoration:none;
+}
+input#search{
+    width:140px;
+    height:20px;
+    border:none;
+    float:left;
+}
+
+ul#globalNavigation li img{
+    margin:-5px 0 0 15;
+    vertical-align:bottom;
+    float:left;
+}
+/*----------------------------------------
+ 導覽
+----------------------------------------*/
+div#global_navi {
+	height:50px;
+    width:100%;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+	background:#FF7100;
+    position:fixed; /*固定位置定位*/
+    top:80; /*距離上方 0 像素*/
+    z-index:1; /*重疊時會在其他元素之上*/
+	}
+
+div#global_navi-inner {
+	width:500px;
+    margin-left:auto;
+    margin-right:auto;
+	}
+/*------
+ 主導覽
+-------*/
+div#global_navi ul {
+    margin: 0 0 0 0px;
+    display: inline-block;
+    *display: inline;
+	}
+
+div#global_navi ul li {
+	width:150px;  
+	height:50px;
+	float:left;
+    list-style:none;
+	font-size:20px;
+    text-align:center;  
+    line-height:50px;
+}
+
+div#global_navi a {
+	display:block;
+	height:50px;
+  
+	text-decoration:none;
+	color:#fff;
+	}
+div#global_navi ul li ul li a {
+    background:#7F7F7F;
+}
+
+div#global_navi ul li ul li a:hover{
+    color:#FF7100;
+}
+
+div#global_navi li a:hover {
+    color:#FF7100;
+    background:#7F786B;
+	}
+/*------
+ 下拉式
+-------*/
+div#global_navi ul li ul.pd {
+	display:none;
+	font-size:100%;
+	padding:0;
+	}
+div#global_navi ul li:hover ul.pd {
+	display:block; 
+	position:absolute;
+	z-index:10;
+	}
+div#global_navi ul li ul.pd li {
+	float:none;
+	}
+/*----------------------------------------
+ contents
+----------------------------------------*/
+div#contents{
+    width:100%;
+	top:130px;
+	margin: 0px;
+	padding-bottom: 100px;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+	text-align:center;
+	font-size:16px;
+	
+}
+
+div#contents-inner{
+	width:900px;
+	margin:260 auto 0;
+	border-radius:6px;
+	background:rgba(255,255,255,0.75);
+}
+/*----------------------------------------
+ 新增任務
+----------------------------------------*/
+.button-on{
+	width:176px;
+	height:50px;
+	line-height:50px;
+	color:white;
+	border:#FF7100;
+	background-color:#FF7100;
+	font-size:24px;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+}
+
+div#task-story{
+    width:100%;
+    height:40;
+    margin:10 0 10 0;
+}
+
+div#task-story-left{
+    width: 150px;
+    height: 40px;
+	line-height:40px;
+    font-size:20;
+    float:left;
+    color:#ffffff;
+    background:#FF7100;
+}
+
+div#task-story-right{
+    width: 150px;
+    height: 40px;
+    border-top: 40px solid #FF7100;
+    border-right: 40px solid transparent;
+}
+
+
+div#task-story p{
+    height: 50;
+    width: 250px;
+}
+
+
+div#active-head{
+	width:100%;
+	height:50px;
+	background:#C6C5CC;
+}
+
+div#active{
+	width:800;
+	height:250;
+	margin:10 auto 0;
+    background:#ffffff;
+    
+}
+
+div#active-picture{
+    width:250;
+	height:250;
+    background:#C6C5CC;
+    float:left;
+}
+
+div#active-picture p{
+    color:white;
+    font-size:18px;
+	font-weight: bold;
+    line-height:12;  
+}
+
+div#active-picture img{
+    width:250;
+	height:250;
+    display:block;
+}
+
+div#active-inner input{
+	font-size:16px;
+	margin:20 0 0 20;
+    float:left;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+}
+
+div#task-name input{
+    width:360px;
+	height:30px;
+}
+
+div#task-block input{
+    width:210px;
+	height:30px;
+}
+
+div#task-URL input{
+    width:250px;
+    float:left;
+    text-overflow: ellipsis;
+}
+
+
+div#active-inner select{
+	width:100px;
+	height:30px;
+	font-size:16px;
+    margin:20 0 0 20;
+    float:left;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+}
+
+div#active-inner textarea{
+	width:480px;
+	height:110px;
+	font-size:16px;
+    margin:20 0 0 20;
+    float:left;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+}
+/*----------------------------------------
+ 新增故事
+----------------------------------------*/
+div#story{
+    width:800;
+	height:200;
+	margin:auto;      
+}
+
+div#story-content{
+    width:750;
+	height:200;
+    float:left;
+    background:#ffffff;
+	border-bottom:1px solid #ffffff;
+}
+
+.story-picture{
+    width:200;
+	height:200;
+    background:#C6C5CC;
+    float:left;
+}
+
+.story-picture p{
+    color:white;
+    font-size:18px;
+	font-weight: bold;
+    line-height:10;  
+}
+
+.story-picture img{
+    width:200;
+	height:200;
+    display:block;
+}
+/*
+ 新增鈕
+-------*/
+
+div#story-inner input{
+	font-size:16px;
+	margin:10 0 0 20;
+    float:left;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+}
+
+div#story-name input{
+    width:360px;
+	height:30px;
+}
+
+div#story-block input{
+    width:300px;
+	height:30px;
+}
+
+div#story-URL input{
+    width:200px;
+    float:left;
+    text-overflow: ellipsis;
+}
+
+div#story-inner textarea{
+	width:480px;
+	height:100px;
+	font-size:16px;
+    margin:10 0 0 20;
+    float:left;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+}
+/*------
+工具-下架
+-------*/
+div#story-tool{
+	width:50;
+	height:200;
+	float:left;
+}
+
+div#story-tool-off{
+	width:50;
+	height:50;
+	float:left;
+}
+
+div#story-tool-off input{
+	width:50;
+	height:50;
+    background:#FF7100;
+}
+
+/*------
+功能-導覽行
+-------*/
+div#active-bar{
+    width:100%;
+    height:70;
+    margin:20 0 20 0;
+}
+
+div#active-bar input{
+    width:100;
+    height:50;
+    margin:10 20 10 20;
+    font-size:18;
+    color:white;
+    border-radius: 6px; 
+    background-color:#4F6DCC;
+    font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+}
+
+/*----------------------------------------
+backtop
+----------------------------------------*/
+div#backtop{
+	width:900;
+	margin:0 auto 75;
+	border-radius:6px;
+}
+
+div#backbth{
+	width: 65px;
+	height: 65px;
+	line-height:65px;
+	margin-left:12;
+	display: block;
+	float: right;
+	text-align: center;
+	border-radius: 50%;
+	background:rgba(255,255,255,0.9);
+}
+
+div#backbth a{
+	color:#333333;
+	font-size:18;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+div#backbth a:hover{
+	color:#ffffff;
+	background:#FF7100;
+	width: 65px;
+	height: 65px;
+	display: block;
+	border-radius: 50%;
+}
+/*----------------------------------------
+ footer
+----------------------------------------*/
+div#footer{
+    width:100%;
+	color:#bbb;
+	font-size:14px;
+    background:#333333;
+	font-family: "微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+	
+}
+
+div#footer-inner{
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+	padding-top:10px;
+    padding-bottom:20px;
+	text-align:center;
+    overflow:hidden;/* clearfix */
+    /zoom:1;/* clearfix for IE */
+
+}
+
+ul#siteinfoNavigation{
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0;
+    list-style:none;
+    float:left;
+}
+
+ul#siteinfoNavigation li{
+    display:inline;
+    margin:0;
+    padding:0 0.8em;
+    border-right:1px solid #FFFFFF;
+}
+
+ul#siteinfoNavigation li a{
+    color:#FFFFFF;
+    text-decoration:none;
+    float:none;
+}
+
+div#footer address{
+    font-style:normal;
+    float:none;
+}
