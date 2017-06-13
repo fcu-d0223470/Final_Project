@@ -6,15 +6,14 @@
       表示尚未登入網站，將使用者導向首頁 index.htm */
   if ($passed != "TRUE")
   {
-    header("location:login.htm");
+    header("location:index.htm");
     exit();
   }
   else
   {
     require_once("dbtools.inc.php");
-	date_default_timezone_set('Asia/Taipei');
    
-    $file='../picture/';
+    $file='C:/xampp/htdocs/picture/';
     $sum_task = 0;
     $j = 1;
     
@@ -22,15 +21,12 @@
     $task_name = $_POST["task_name"];
     $task_block = $_POST["task_block"];
     $task_type = $_POST["task_type"];
-    $task_introduction = $_POST["task_introduction"];
-	$date= date ("Y-m-d H:i:s") ;
+    $task_introduction = $_POST["task_introduction"];      
     
     $story_name_array = $_POST["story_name"];
     $story_address_array = $_POST["story_address"];
     $story_data_array = $_POST["story_data"];
-    $story_latitude_array = $_POST["story_latitude"];
-    $story_longitude_array = $_POST["story_longitude"];  
-    
+      
     $link = create_connection();
   
     //檢查任務名稱是否有使用過  
@@ -73,8 +69,8 @@
         else
         {
             //新增任務內容
-            $sql = "INSERT INTO task(task_name,task_block,task_type,task_introduction,task_part,task_developer,task_date)
-                    VALUES('$task_name','$task_block','$task_type','$task_introduction','$sum_task','$task_developer','$date')";
+            $sql = "INSERT INTO task(task_name,task_block,task_type,task_introduction,task_part,task_developer)
+                    VALUES('$task_name','$task_block','$task_type','$task_introduction','$sum_task','$task_developer')";
             $result = execute_sql($link, "ebizlearn_th", $sql);
             
             if($result==0)
@@ -108,14 +104,12 @@
                     $name = $story_name_array[$i];
                     $address = $story_address_array[$i];
                     $data = $story_data_array[$i];
-                    $latitude = $story_latitude_array[$i];
-                    $longitude = $story_longitude_array[$i];
                 
                     //新增故事
                     if($name!="" && $address!="" && $_FILES["story_picture"]["name"][$i] != "" && $data!="")
                     {   
-                        $sql = "INSERT INTO story(story_number,story_name,story_address,story_data,story_part,story_latitude,story_longitude)
-                                VALUES('$row[task_number]','$name','$address','$data','$j','$latitude','$longitude')";
+                        $sql = "INSERT INTO story(story_number,story_name,story_address,story_data,story_part)
+                                VALUES('$row[task_number]','$name','$address','$data','$j')";
                         $result = execute_sql($link, "ebizlearn_th", $sql);             
                         
                         //故事編號
@@ -146,7 +140,7 @@
 							if(x){
 								location.assign('newtask.php'); 
 							}else{                                
-								location.assign('developer.php');
+								location.assign('main.php');
 							}
                        </script>";
             }    

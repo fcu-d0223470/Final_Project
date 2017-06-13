@@ -40,8 +40,8 @@
 
     //新增帳號
     $sql = "INSERT INTO user (user_account, user_password, user_fname, user_lname, user_sex, 
-             user_telephone, user_cellphone, user_email, user_address, user_url, user_date) 
-             VALUES ('$account','$password','$fname','$lname','$sex','$telephone','$cellphone','$email','$address','$url','$date')";
+             user_telephone, user_cellphone, user_email, user_address, user_url) 
+             VALUES ('$account','$password','$fname','$lname','$sex','$telephone','$cellphone','$email','$address','$url')";
     $result = execute_sql($link, "ebizlearn_th", $sql);
     
     //查ID
@@ -57,7 +57,7 @@
     $connect_have = mysqli_query($link,$insert_have);
 	
     //新增資料夾
-    $path = '../picture/'.$row['user_id'];
+    $path = 'C:/xampp/htdocs/picture/'.$row['user_id'];
     mkdir($path,0777,true);
 	
 
@@ -69,9 +69,9 @@
 	echo"<script type='text/javascript'>
 			x=confirm('註冊成功!是否進入會員專區!')
 				if(x){
-					location.assign('member_new.php');
+					location.assign('main.php');
                 }else{                                
-					location.assign('login.html');
+					location.assign('index.htm');
 				}
 		</script>";
 	
